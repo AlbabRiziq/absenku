@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./App.css";
 import Beranda from "./Components/Splashscreen/Beranda/Beranda";
+import Login from "./Login/Login";
 // import Splashscreen from "./Components/Splashscreen/SplashScreen/Splashscreen";
 // import Login from "./Login/Login";
 
