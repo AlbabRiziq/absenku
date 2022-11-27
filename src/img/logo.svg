@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2020.6 428.65">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: 1.45em;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        font-family: Montserrat-Bold, Montserrat;
+        font-size: 344.31px;
+        font-weight: 700;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        fill: #d59d36;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .cls-7 {
+        letter-spacing: 1.45em;
+      }
+
+      .cls-8 {
+        letter-spacing: 1.44em;
+      }
+
+      .cls-5 {
+        font-family: Montserrat-Regular, Montserrat;
+        font-size: 56.83px;
+      }
+
+      .cls-9 {
+        fill: none;
+        stroke: #d59d36;
+        stroke-linecap: square;
+        stroke-linejoin: round;
+        stroke-width: 34.51px;
+      }
+    </style>
+  </defs>
+  <text class="cls-3" transform="translate(443.68 334.84)"><tspan x="0" y="0">BSEN</tspan><tspan class="cls-6" x="992.3" y="0">K</tspan><tspan class="cls-2" x="1243.65" y="0">U</tspan></text>
+  <text class="cls-5" transform="translate(472.26 406.79)"><tspan class="cls-1" x="0" y="0">Bu</tspan><tspan class="cls-8" x="245.46" y="0">k</tspan><tspan class="cls-7" x="361.23" y="0">an Absenmu</tspan></text>
+  <g>
+    <polyline class="cls-9" points="151.68 17.26 17.26 17.26 17.26 151.68"/>
+    <polyline class="cls-9" points="17.26 276.98 17.26 411.4 151.68 411.4"/>
+    <polyline class="cls-9" points="411.4 151.68 411.4 17.26 276.98 17.26"/>
+    <polyline class="cls-9" points="276.98 411.4 411.4 411.4 411.4 276.98"/>
+  </g>
+  <path class="cls-4" d="M279.56,282.87h-111.38l-21.25,51.41h-56.89L196.96,94.38h24.49c18.46,0,35.2,10.85,42.74,27.71l71.1,159.01c11.17,24.98-7.11,53.19-34.48,53.19h0l-21.25-51.41Zm-25.1-60.56l-30.42-73.44-38.04,91.85h56.16c9.49,0,15.93-9.64,12.3-18.41Z"/>
+</svg>

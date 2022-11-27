@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Beranda from "./Components/Splashscreen/Beranda/Beranda";
+// import Splashscreen from "./Components/Splashscreen/SplashScreen/Splashscreen";
+// import Login from "./Login/Login";
+
+// function Mengganti() {
+//   const [isLogin, setIsLogin] = useState(true);
+//   return <div>{isLogin ? <Beranda /> : <Login />}</div>;
+// }
+
+// function App() {
+//   const [ganti, setganti] = useState(false);
+
+//   setTimeout(() => {
+//     setganti(true);
+//   }, 5000);
+
+//   return <div>{!ganti ? <Splashscreen /> : <Mengganti />}</div>;
+// }
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Beranda />
     </div>
   );
 }
