@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Beranda from "./Components/Splashscreen/Beranda/Beranda";
 import Login from "./Login/Login";
+import Beranda from "./Route/Beranda/Beranda";
 // import Splashscreen from "./Components/Splashscreen/SplashScreen/Splashscreen";
 // import Login from "./Login/Login";
 
