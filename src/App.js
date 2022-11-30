@@ -1,11 +1,11 @@
 import { useState } from "react";
 import Login from "./Login/Login";
 import Beranda from "./Route/Beranda/Beranda";
-// import Splashscreen from "./Components/Splashscreen/SplashScreen/Splashscreen";
+import Splashscreen from "./Components/Splashscreen/SplashScreen/Splashscreen";
 // import Login from "./Login/Login";
 
 // function Mengganti() {
-//   const [isLogin, setIsLogin] = useState(true);
+//   const [isLogin, setIsLogin] = useState(false);
 //   return <div>{isLogin ? <Beranda /> : <Login />}</div>;
 // }
 
