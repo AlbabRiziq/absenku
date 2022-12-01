@@ -1,7 +1,7 @@
 import home from "../../../img/icon/home.svg";
 import setting from "../../../img/icon/setting.svg";
 import list from "../../../img/icon/list.svg";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (

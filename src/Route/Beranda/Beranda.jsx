@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import profilePic from "../../img/rijik.jpg";
 import mulaiAbsen from "../../img/icon/mulaiAbsen.svg";
 import sakit from "../../img/icon/Sick.svg";
@@ -46,12 +46,14 @@ function Beranda() {
 
             <div className="flex w-full items-center justify-evenly flex-wrap">
               <div className="tempatbox mt-10 flex items-center justify-evenly flex-wrap">
-                <div className="bg-[#e9e995] w-[150px] flex flex-col items-center justify-center p-5 rounded-xl shadow-xl m-[10px] hover:scale-x-110 hover:shadow-2xl transition-all">
-                  <img src={mulaiAbsen} alt="" />
-                  <h1 className="text-sm mt-5 font-bold text-[#8d513e] ">
-                    MULAI ABSEN
-                  </h1>
-                </div>
+                <Link to="/absen">
+                  <div className="bg-[#e9e995] w-[150px] flex flex-col items-center justify-center p-5 rounded-xl shadow-xl m-[10px] hover:scale-x-110 hover:shadow-2xl transition-all">
+                    <img src={mulaiAbsen} alt="" />
+                    <h1 className="text-sm mt-5 font-bold text-[#8d513e] ">
+                      MULAI ABSEN
+                    </h1>
+                  </div>
+                </Link>
 
                 <div className="bg-[#e9e995] w-[150px] flex flex-col items-center justify-center p-5 rounded-xl shadow-xl m-[10px] hover:scale-x-110 hover:shadow-2xl transition-all">
                   <img src={sakit} alt="" />
