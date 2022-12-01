@@ -1,3 +1,4 @@
+import { Outlet, Link } from "react-router-dom";
 import profilePic from "../../img/rijik.jpg";
 import mulaiAbsen from "../../img/icon/mulaiAbsen.svg";
 import sakit from "../../img/icon/Sick.svg";
