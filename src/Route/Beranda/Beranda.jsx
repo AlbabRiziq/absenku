@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
 import profilePic from "../../img/rijik.jpg";
 import mulaiAbsen from "../../img/icon/mulaiAbsen.svg";
@@ -7,6 +9,18 @@ import riwayat from "../../img/icon/History.svg";
 import Navbar from "../../Components/Splashscreen/Navbar/Navbar";
 
 function Beranda() {
+  const [jam, setJam] = useState("");
+
+  useEffect(() => {
+    setInterval(() => {
+      let waktu = new Date();
+      let jam = waktu.getHours();
+      let menit = waktu.getMinutes();
+      let detik = waktu.getSeconds();
+      setJam(`${jam}:${menit}:${detik}`);
+    }, 1000);
+  });
+
   return (
     <div className="w-screen">
       <div className="bg-[#e9e995] absolute w-screen -z-30 kecil:h-[23rem] lumayan:h-64 rounded-b-3xl shadow-lg ">
@@ -16,7 +30,7 @@ function Beranda() {
         <div className=" flex  justify-center items-center flex-wrap">
           <div className="jam text-center text-sm mx-2 rounded-xl text-[#8d513e] bg-white p-2 px-5 m-2">
             <p className="font-semibold text-[8px]">MINGGU 20 NOVEMBER 2022</p>
-            <p className="text-base font-bold">12:12:12</p>
+            <p className="text-base font-bold">{jam}</p>
           </div>
           <div className="jam text-center text-sm mx-2 rounded-xl text-[#8d513e] bg-white p-2 px-5 m-2">
             <p className="font-semibold text-[8px]">MINGGU 20 NOVEMBER 2022</p>
