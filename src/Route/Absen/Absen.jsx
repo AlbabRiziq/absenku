@@ -1,16 +1,16 @@
 import { useRef, useEffect, useState } from "react";
 import Judul from "../../Components/Splashscreen/Judul/Judul";
 import Navbar from "../../Components/Splashscreen/Navbar/Navbar";
-
 import * as faceapi from "face-api.js";
+import * as ml5 from "ml5";
 
 function Absen() {
   const [modelsLoaded, setModelsLoaded] = useState(false);
-  const [captureVideo, setCaptureVideo] = useState(false);
+  const [identitas, setIdentitas] = useState();
 
   const videoRef = useRef();
-  const videoHeight = 480;
-  const videoWidth = 640;
+  const videoHeight = 320;
+  const videoWidth = 480;
   const canvasRef = useRef();
 
   useEffect(() => {
@@ -27,6 +27,26 @@ function Absen() {
       ]).then(setModelsLoaded(true));
     };
     loadModels();
+  });
+
+  useEffect(() => {
+    let klasifikasi = ml5.imageClassifier("./models/muka/model.json", () => {
+      console.log("Model Loaded");
+      gotResult();
+    });
+
+    function gotResult() {
+      setInterval(() => {
+        klasifikasi.classify(videoRef.current, (err, results) => {
+          if (err) {
+            console.log(err);
+          } else {
+            // console.log(results);
+            setIdentitas(results[0].label);
+          }
+        });
+      }, 1000);
+    }
   });
 
   const handleVideoOnPlay = () => {
@@ -47,6 +67,8 @@ function Absen() {
           new faceapi.TinyFaceDetectorOptions()
         );
 
+        // console.log(detections);
+
         const resizedDetections = faceapi.resizeResults(
           detections,
           displaySize
@@ -60,15 +82,6 @@ function Absen() {
         canvasRef &&
           canvasRef.current &&
           faceapi.draw.drawDetections(canvasRef.current, resizedDetections);
-        canvasRef &&
-          canvasRef.current &&
-          faceapi.draw.drawFaceLandmarks(canvasRef.current, resizedDetections);
-        canvasRef &&
-          canvasRef.current &&
-          faceapi.draw.drawFaceExpressions(
-            canvasRef.current,
-            resizedDetections
-          );
       }
     }, 100);
   };
@@ -89,7 +102,7 @@ function Absen() {
   return (
     <div>
       <Judul />
-      <div className="w-screen flex items-center justify-center my-5">
+      <div className="w-screen flex items-center justify-center my-5 p-5">
         <video
           ref={videoRef}
           height={videoHeight}
@@ -98,6 +111,7 @@ function Absen() {
           className="rounded-3xl"
         />
         <canvas className="absolute" ref={canvasRef}></canvas>
+        <h1>{identitas}</h1>
       </div>
       <Navbar />
     </div>

@@ -10,6 +10,7 @@ import Navbar from "../../Components/Splashscreen/Navbar/Navbar";
 
 function Beranda() {
   const [jam, setJam] = useState("");
+  const [hari, setHari] = useState("");
 
   useEffect(() => {
     setInterval(() => {
@@ -19,6 +20,38 @@ function Beranda() {
       let detik = waktu.getSeconds();
       setJam(`${jam}:${menit}:${detik}`);
     }, 1000);
+
+    const listNamaHari = [
+      "Minggu",
+      "Senin",
+      "Selasa",
+      "Rabu",
+      "Kamis",
+      "Jumat",
+      "Sabtu",
+    ];
+    const listNamaBulan = [
+      "Januari",
+      "Februari",
+      "Maret",
+      "April",
+      "Mei",
+      "Juni",
+      "Juli",
+      "Agustus",
+      "September",
+      "Oktober",
+      "November",
+      "Desember",
+    ];
+    const tanggal = new Date();
+    let indexHari = tanggal.getDay();
+
+    setHari(
+      `${listNamaHari[indexHari]}, ${tanggal.getDate()} ${
+        listNamaBulan[tanggal.getMonth()]
+      } ${tanggal.getFullYear()}`
+    );
   });
 
   return (
@@ -29,11 +62,13 @@ function Beranda() {
       <div className="w-full flex flex-col justify-center items-center absolute mt-20 p-4 ">
         <div className=" flex  justify-center items-center flex-wrap">
           <div className="jam text-center text-sm mx-2 rounded-xl text-[#8d513e] bg-white p-2 px-5 m-2">
-            <p className="font-semibold text-[8px]">MINGGU 20 NOVEMBER 2022</p>
+            <p className="font-semibold text-[8px]">
+              {hari.toLocaleUpperCase()}
+            </p>
             <p className="text-base font-bold">{jam}</p>
           </div>
           <div className="jam text-center text-sm mx-2 rounded-xl text-[#8d513e] bg-white p-2 px-5 m-2">
-            <p className="font-semibold text-[8px]">MINGGU 20 NOVEMBER 2022</p>
+            <p className="font-semibold text-[8px]">WAKTU ABSEN</p>
             <p className="text-base font-bold">12:12:12</p>
           </div>
         </div>
