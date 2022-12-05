@@ -26,7 +26,10 @@ function Absen() {
         faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
         faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
         faceapi.nets.faceExpressionNet.loadFromUri("/models"),
-      ]).then(setIsModel2Loaded(true));
+      ]).then(() => {
+        setIsModel2Loaded(true);
+        console.log("model 2 loaded");
+      });
     };
     loadModels();
   });
