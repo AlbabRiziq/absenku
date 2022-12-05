@@ -3,9 +3,11 @@ import Judul from "../../Components/Splashscreen/Judul/Judul";
 import Navbar from "../../Components/Splashscreen/Navbar/Navbar";
 import * as faceapi from "face-api.js";
 import * as ml5 from "ml5";
+import Loading from "../../Components/Loading/Loading";
 
 function Absen() {
   const [modelsLoaded, setModelsLoaded] = useState(false);
+  const [model2Loaded, setIsModel2Loaded] = useState(false);
   const [identitas, setIdentitas] = useState();
 
   const videoRef = useRef();
@@ -24,7 +26,7 @@ function Absen() {
         faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
         faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
         faceapi.nets.faceExpressionNet.loadFromUri("/models"),
-      ]).then(setModelsLoaded(true));
+      ]).then(setIsModel2Loaded(true));
     };
     loadModels();
   });
@@ -32,6 +34,7 @@ function Absen() {
   useEffect(() => {
     let klasifikasi = ml5.imageClassifier("./models/muka/model.json", () => {
       console.log("Model Loaded");
+      setModelsLoaded(true);
       gotResult();
     });
 
@@ -102,17 +105,24 @@ function Absen() {
   return (
     <div>
       <Judul />
-      <div className="w-screen flex items-center justify-center my-5 p-5">
-        <video
-          ref={videoRef}
-          height={videoHeight}
-          width={videoWidth}
-          onPlay={handleVideoOnPlay}
-          className="rounded-3xl"
-        />
-        <canvas className="absolute" ref={canvasRef}></canvas>
-        <h1>{identitas}</h1>
-      </div>
+
+      {modelsLoaded && model2Loaded ? (
+        <div className="w-screen flex items-center justify-center my-5 p-5">
+          <video
+            ref={videoRef}
+            height={videoHeight}
+            width={videoWidth}
+            onPlay={handleVideoOnPlay}
+            className="rounded-3xl"
+          />
+          <canvas className="absolute" ref={canvasRef}></canvas>
+          <h1>{identitas}</h1>
+        </div>
+      ) : (
+        <div className="w-screen flex items-center justify-center my-5 p-5">
+          <Loading />
+        </div>
+      )}
       <Navbar />
     </div>
   );
