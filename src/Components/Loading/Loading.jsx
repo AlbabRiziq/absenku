@@ -1,6 +1,6 @@
 function Loading() {
   return (
-    <div className="h-20 w-20 border border-black border-l-2 border-r-0 border-b-0 rounded-full animate-spin"></div>
+    <div className="h-20 w-20 border mt-5 border-black border-l-2 border-r-0 border-b-0 rounded-full animate-spin"></div>
   );
 }
 

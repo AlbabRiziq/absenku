@@ -108,24 +108,17 @@ function Absen() {
   return (
     <div>
       <Judul />
-
-      {modelsLoaded && model2Loaded ? (
-        <div className="w-screen flex items-center justify-center my-5 p-5">
-          <video
-            ref={videoRef}
-            height={videoHeight}
-            width={videoWidth}
-            onPlay={handleVideoOnPlay}
-            className="rounded-3xl"
-          />
-          <canvas className="absolute" ref={canvasRef}></canvas>
-          <h1>{identitas}</h1>
-        </div>
-      ) : (
-        <div className="w-screen flex items-center justify-center my-5 p-5">
-          <Loading />
-        </div>
-      )}
+      <div className="w-screen flex items-center justify-center my-5 p-5 flex-col">
+        <video
+          ref={videoRef}
+          height={videoHeight}
+          width={videoWidth}
+          onPlay={handleVideoOnPlay}
+          className="rounded-3xl"
+        />
+        <canvas className="absolute" ref={canvasRef}></canvas>
+        {modelsLoaded && model2Loaded ? <Loading /> : <div>jknk</div>}
+      </div>
       <Navbar />
     </div>
   );
