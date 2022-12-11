@@ -47,7 +47,7 @@ function Absen() {
           if (err) {
             console.log(err);
           } else {
-            // console.log(results);
+            console.log(results);
             setIdentitas(results[0].label);
           }
         });
@@ -117,7 +117,7 @@ function Absen() {
           className="rounded-3xl"
         />
         <canvas className="absolute" ref={canvasRef}></canvas>
-        {modelsLoaded && model2Loaded ? <Loading /> : <div>jknk</div>}
+        {model2Loaded && modelsLoaded ? <div>{identitas}</div> : <Loading />}
       </div>
       <Navbar />
     </div>
