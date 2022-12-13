@@ -4,6 +4,7 @@ import Navbar from "../../Components/Splashscreen/Navbar/Navbar";
 import * as faceapi from "face-api.js";
 import * as ml5 from "ml5";
 import Loading from "../../Components/Loading/Loading";
+import axios from "axios";
 
 function Absen() {
   const [modelsLoaded, setModelsLoaded] = useState(false);
@@ -18,6 +19,17 @@ function Absen() {
   useEffect(() => {
     getVideo();
   }, [videoRef]);
+
+  useEffect(() => {
+    axios({
+      method: "POST",
+      url: "http://localhost:8080/absen",
+      data: {
+        identitas: identitas,
+      },
+    });
+    console.log(identitas);
+  }, [identitas]);
 
   useEffect(() => {
     const loadModels = async () => {
@@ -119,7 +131,9 @@ function Absen() {
         <canvas className="absolute" ref={canvasRef}></canvas>
         {model2Loaded && modelsLoaded ? <div>{identitas}</div> : <Loading />}
       </div>
-      <Navbar />
+      <div className="w-screen flex items-center justify-center">
+        <Navbar />
+      </div>
     </div>
   );
 }
