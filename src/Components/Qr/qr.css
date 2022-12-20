@@ -1,0 +1,6 @@
+video {
+  border-radius: 10px;
+}
+video:nth-child(2) {
+  display: none;
+}

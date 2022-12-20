@@ -3,6 +3,7 @@ import Login from "./Login/Login";
 import Beranda from "./Route/Beranda/Beranda";
 import Splashscreen from "./Components/Splashscreen/SplashScreen/Splashscreen";
 import Loading from "./Components/Loading/Loading";
+import Qr from "./Components/Qr/Qr";
 
 // function Mengganti() {
 //   const [isLogin, setIsLogin] = useState(false);

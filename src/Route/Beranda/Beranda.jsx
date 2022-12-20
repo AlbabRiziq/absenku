@@ -52,7 +52,7 @@ function Beranda() {
         listNamaBulan[tanggal.getMonth()]
       } ${tanggal.getFullYear()}`
     );
-  });
+  }, []);
 
   return (
     <div className="w-screen">
