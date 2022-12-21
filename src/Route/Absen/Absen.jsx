@@ -1,10 +1,10 @@
-import { useRef, useEffect, useState } from "react";
+// import { useRef, useEffect, useState } from "react";
 import Judul from "../../Components/Splashscreen/Judul/Judul";
 import Navbar from "../../Components/Splashscreen/Navbar/Navbar";
-import * as faceapi from "face-api.js";
+// import * as faceapi from "face-api.js";
 // import * as ml5 from "ml5";
-import Loading from "../../Components/Loading/Loading";
-import axios from "axios";
+// import Loading from "../../Components/Loading/Loading";
+// import axios from "axios";
 import Qr from "../../Components/Qr/Qr";
 
 function Absen() {

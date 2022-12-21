@@ -5,6 +5,7 @@ import "./qr.css";
 function Qr() {
   const videoRef = useRef(null);
   const hasil = useRef(null);
+  const [hasilQr, setHasilQr] = useState();
 
   useEffect(() => {
     const scanner = new Html5QrcodeScanner("reader", {
@@ -19,6 +20,7 @@ function Qr() {
 
   const onScanSuccess = (decodedText, decodedResult) => {
     console.log(decodedResult.decodedText);
+    setHasilQr(decodedResult.decodedText);
   };
 
   // useEffect(() => {
@@ -39,11 +41,15 @@ function Qr() {
   // };
 
   return (
-    <div className="-mt-10">
-      <video ref={videoRef}></video>
+    <div className="">
       <div className="p-5 h-80 w-80">
+        <video ref={videoRef} className="-mt-72"></video>
         <div className="hasil rounded-lg" id="reader" ref={hasil}></div>
       </div>
+      <div>{hasilQr}</div>
+      <br />
+      <br />
+      <br />
     </div>
   );
 }
