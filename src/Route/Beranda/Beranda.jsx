@@ -7,6 +7,7 @@ import sakit from "../../img/icon/Sick.svg";
 import izin from "../../img/icon/checkBox.svg";
 import riwayat from "../../img/icon/History.svg";
 import Navbar from "../../Components/Splashscreen/Navbar/Navbar";
+import DataContext from "../../Context/DataContext";
 
 function Beranda() {
   const [jam, setJam] = useState("");
@@ -104,19 +105,24 @@ function Beranda() {
                   </div>
                 </Link>
 
-                <div className="bg-[#e9e995] w-[150px] flex flex-col items-center justify-center p-5 rounded-xl shadow-xl m-[10px] hover:scale-x-110 hover:shadow-2xl transition-all">
-                  <img src={sakit} alt="" />
-                  <h1 className="text-sm mt-5 font-bold text-[#8d513e]">
-                    SAKIT
-                  </h1>
-                </div>
+                <Link to="/sakit">
+                  <div className="bg-[#e9e995] w-[150px] flex flex-col items-center justify-center p-5 rounded-xl shadow-xl m-[10px] hover:scale-x-110 hover:shadow-2xl transition-all">
+                    <img src={sakit} alt="" />
+                    <h1 className="text-sm mt-5 font-bold text-[#8d513e]">
+                      SAKIT
+                    </h1>
+                  </div>
+                </Link>
 
-                <div className="bg-[#e9e995] w-[150px] flex flex-col items-center justify-center p-5 rounded-xl shadow-xl m-[10px] hover:scale-x-110 hover:shadow-2xl transition-all">
-                  <img src={izin} alt="" />
-                  <h1 className="text-sm mt-5 font-bold text-[#8d513e]">
-                    IZIN
-                  </h1>
-                </div>
+                <Link to="/izin">
+                  <div className="bg-[#e9e995] w-[150px] flex flex-col items-center justify-center p-5 rounded-xl shadow-xl m-[10px] hover:scale-x-110 hover:shadow-2xl transition-all">
+                    <img src={izin} alt="" />
+                    <h1 className="text-sm mt-5 font-bold text-[#8d513e]">
+                      IZIN
+                    </h1>
+                  </div>
+                </Link>
+
                 <div className="bg-[#e9e995] w-[150px] flex flex-col items-center justify-center p-5 rounded-xl shadow-xl m-[10px] hover:scale-x-110 hover:shadow-2xl transition-all">
                   <img src={riwayat} alt="" />
                   <h1 className="text-sm mt-5 font-bold text-[#8d513e]">

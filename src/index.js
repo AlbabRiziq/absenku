@@ -4,6 +4,8 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Absen from "./Route/Absen/Absen";
+import Sakit from "./Route/Sakit/Sakit";
+import Izin from "./Route/Izin/Izin";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -12,6 +14,8 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/absen" element={<Absen />} />
+        <Route path="/sakit" element={<Sakit />} />
+        <Route path="/izin" element={<Izin />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

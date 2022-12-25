@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Login from "./Login/Login";
 import Beranda from "./Route/Beranda/Beranda";
 import Splashscreen from "./Components/Splashscreen/SplashScreen/Splashscreen";
 import Loading from "./Components/Loading/Loading";
