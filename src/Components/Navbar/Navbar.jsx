@@ -1,6 +1,6 @@
-import home from "../../../img/icon/home.svg";
-import setting from "../../../img/icon/setting.svg";
-import list from "../../../img/icon/list.svg";
+import home from "../../img/icon/home.svg";
+import setting from "../../img/icon/setting.svg";
+import list from "../../img/icon/list.svg";
 import { Link } from "react-router-dom";
 
 function Navbar() {
