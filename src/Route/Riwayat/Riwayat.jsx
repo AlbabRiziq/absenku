@@ -1,8 +1,5 @@
 import Judul from "../../Components/Judul/Judul";
 import Navbar from "../../Components/Navbar/Navbar";
-import { Link } from "react-router-dom";
-import profilePic from "../../img/rijik.jpg";
-import mulaiAbsen from "../../img/icon/mulaiAbsen.svg";
 import sakit from "../../img/icon/Sick.svg";
 import izin from "../../img/icon/checkBox.svg";
 import alpha from "../../img/icon/alpha.svg";
@@ -35,7 +32,9 @@ function Riwayat() {
       </div>
 
       {/*  */}
-      <Navbar />
+      <div className="w-full flex justify-center">
+        <Navbar />
+      </div>
     </div>
   );
 }

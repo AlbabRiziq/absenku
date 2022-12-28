@@ -23,7 +23,9 @@ function Sakit() {
           </button>
         </form>
       </div>
-      <Navbar />
+      <div className="w-full flex justify-center">
+        <Navbar />
+      </div>
     </div>
   );
 }
