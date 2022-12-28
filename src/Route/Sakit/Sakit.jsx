@@ -18,7 +18,7 @@ function Sakit() {
             placeholder="MASUKAN ALASAN KAMU"
             className="bg-[#e9e995] rounded-lg mb-10 text-red-900 placeholder:text-[#884939] p-5"
           ></textarea>
-          <button className="bg-[#e9e995] text-[#874839] p-3 rounded-lg m-5 font-bold">
+          <button className="bg-[#e9e995] text-[#874839] p-3 rounded-lg m-5 font-bold hover:px-5 transition-all">
             KIRIM
           </button>
         </form>

@@ -124,12 +124,14 @@ function Beranda() {
                   </div>
                 </Link>
 
-                <div className="bg-[#e9e995] w-[150px] flex flex-col items-center justify-center p-5 rounded-xl shadow-xl m-[10px] hover:scale-x-110 hover:shadow-2xl transition-all">
-                  <img src={riwayat} alt="" />
-                  <h1 className="text-sm mt-5 font-bold text-[#8d513e]">
-                    RIWAYAT
-                  </h1>
-                </div>
+                <Link to="/riwayat">
+                  <div className="bg-[#e9e995] w-[150px] flex flex-col items-center justify-center p-5 rounded-xl shadow-xl m-[10px] hover:scale-x-110 hover:shadow-2xl transition-all">
+                    <img src={riwayat} alt="" />
+                    <h1 className="text-sm mt-5 font-bold text-[#8d513e]">
+                      RIWAYAT
+                    </h1>
+                  </div>
+                </Link>
               </div>
             </div>
 

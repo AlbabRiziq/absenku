@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Absen from "./Route/Absen/Absen";
 import Sakit from "./Route/Sakit/Sakit";
 import Izin from "./Route/Izin/Izin";
+import Profil from "./Route/Profil/Profil";
+import Riwayat from "./Route/Riwayat/Riwayat";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,6 +18,8 @@ root.render(
         <Route path="/absen" element={<Absen />} />
         <Route path="/sakit" element={<Sakit />} />
         <Route path="/izin" element={<Izin />} />
+        <Route path="/profil" element={<Profil />} />
+        <Route path="/riwayat" element={<Riwayat />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
