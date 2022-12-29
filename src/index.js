@@ -8,6 +8,7 @@ import Sakit from "./Route/Sakit/Sakit";
 import Izin from "./Route/Izin/Izin";
 import Profil from "./Route/Profil/Profil";
 import Riwayat from "./Route/Riwayat/Riwayat";
+import Beranda from "./Route/Beranda/Beranda";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,6 +16,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/app" element={<Beranda />} />
         <Route path="/absen" element={<Absen />} />
         <Route path="/sakit" element={<Sakit />} />
         <Route path="/izin" element={<Izin />} />

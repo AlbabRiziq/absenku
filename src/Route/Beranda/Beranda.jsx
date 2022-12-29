@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 import profilePic from "../../img/rijik.jpg";
@@ -6,11 +7,17 @@ import mulaiAbsen from "../../img/icon/mulaiAbsen.svg";
 import sakit from "../../img/icon/Sick.svg";
 import izin from "../../img/icon/checkBox.svg";
 import riwayat from "../../img/icon/History.svg";
-
 import DataContext from "../../Context/DataContext";
 import Navbar from "../../Components/Navbar/Navbar";
 
 function Beranda() {
+  const navigate = useNavigate();
+  const login = window.localStorage.getItem("login");
+
+  if (login == null) {
+    navigate("/");
+  }
+
   const [jam, setJam] = useState("");
   const [hari, setHari] = useState("");
 
