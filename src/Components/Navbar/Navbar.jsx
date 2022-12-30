@@ -1,6 +1,6 @@
 import home from "../../img/icon/home.svg";
-import setting from "../../img/icon/setting.svg";
-import list from "../../img/icon/list.svg";
+// import setting from "../../img/icon/setting.svg";
+// import list from "../../img/icon/list.svg";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -10,8 +10,8 @@ function Navbar() {
         {" "}
         <img src={home} className="kecil:h-7 lumayan:h-8" alt="" />
       </Link>
-      <img src={list} className="kecil:h-7 lumayan:h-8" alt="" />
-      <img src={setting} className="kecil:h-7 lumayan:h-8" alt="" />
+      {/* <img src={list} className="kecil:h-7 lumayan:h-8" alt="" />
+      <img src={setting} className="kecil:h-7 lumayan:h-8" alt="" /> */}
     </div>
   );
 }
