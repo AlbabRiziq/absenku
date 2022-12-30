@@ -12,7 +12,7 @@ function Login() {
       url: "http://localhost:8080/api/login",
       params: {
         nama: nama.toUpperCase(),
-        nisn,
+        nisn, 
       },
     }).then((res) => {
       console.log(res.data);
