@@ -1,11 +1,29 @@
 import { useRef, useEffect, useState } from "react";
 import { Html5QrcodeScanner } from "html5-qrcode";
+import axios from "axios";
 import "./qr.css";
 
 function Qr() {
   const videoRef = useRef(null);
   const hasil = useRef(null);
   const [hasilQr, setHasilQr] = useState();
+
+  useEffect(() => {
+    // axios({
+    //   method: "GET",
+    //   url: "http://localhost:8080/api/login",
+    //   params: {
+    //     nama: nama.toUpperCase(),
+    //     nisn,
+    //   },
+    // }).then((res) => {
+    //   console.log(res.data);
+    //   if (res.data === true) {
+    //     window.localStorage.setItem("login", JSON.stringify({ nama, nisn }));
+    //     window.location.reload();
+    //   }
+    // });
+  });
 
   useEffect(() => {
     const scanner = new Html5QrcodeScanner("reader", {

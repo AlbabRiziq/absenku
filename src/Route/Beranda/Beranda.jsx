@@ -14,7 +14,7 @@ function Beranda() {
   const navigate = useNavigate();
   const login = window.localStorage.getItem("login");
 
-  if (login == null) {
+  if (login === null) {
     navigate("/");
   }
 

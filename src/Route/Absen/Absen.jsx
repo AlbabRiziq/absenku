@@ -1,6 +1,8 @@
 // import { useRef, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Judul from "../../Components/Judul/Judul";
 import Navbar from "../../Components/Navbar/Navbar";
+
 // import * as faceapi from "face-api.js";
 // import * as ml5 from "ml5";
 // import Loading from "../../Components/Loading/Loading";
@@ -8,6 +10,12 @@ import Navbar from "../../Components/Navbar/Navbar";
 import Qr from "../../Components/Qr/Qr";
 
 function Absen() {
+  const navigate = useNavigate();
+  const login = window.localStorage.getItem("login");
+  console.log(login);
+  if (login == null) {
+    navigate("/");
+  }
   //   const [modelsLoaded, setModelsLoaded] = useState(false);
   //   const [model2Loaded, setIsModel2Loaded] = useState(false);
   //   const [identitas, setIdentitas] = useState();

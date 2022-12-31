@@ -3,8 +3,15 @@ import Navbar from "../../Components/Navbar/Navbar";
 import sakit from "../../img/icon/Sick.svg";
 import izin from "../../img/icon/checkBox.svg";
 import alpha from "../../img/icon/alpha.svg";
+import { useNavigate } from "react-router-dom";
 
 function Riwayat() {
+  const navigate = useNavigate();
+  const login = window.localStorage.getItem("login");
+
+  if (login === null) {
+    navigate("/");
+  }
   return (
     <div className="w-screen">
       <Judul />

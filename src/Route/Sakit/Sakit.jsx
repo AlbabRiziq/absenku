@@ -1,7 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import Judul from "../../Components/Judul/Judul";
 import Navbar from "../../Components/Navbar/Navbar";
 
 function Sakit() {
+  const navigate = useNavigate();
+  const login = window.localStorage.getItem("login");
+
+  if (login == null) {
+    navigate("/");
+  }
   return (
     <div>
       <Judul />
