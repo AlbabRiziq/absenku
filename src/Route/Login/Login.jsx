@@ -52,7 +52,7 @@ function Login() {
             onClick={handleLogin}
             className="bg-[#e9e995] text-[#967248] h-12 rounded-lg w-44 my-3 shadow-lg hover:w-48 hover:rounded-full"
           >
-            MASUK
+            LANJUT
           </button>
         </form>
       </div>
