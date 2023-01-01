@@ -9,6 +9,7 @@ import Izin from "./Route/Izin/Izin";
 import Profil from "./Route/Profil/Profil";
 import Riwayat from "./Route/Riwayat/Riwayat";
 import Beranda from "./Route/Beranda/Beranda";
+import Guru from "./Route/Guru/Guru";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,6 +23,7 @@ root.render(
         <Route path="/izin" element={<Izin />} />
         <Route path="/profil" element={<Profil />} />
         <Route path="/riwayat" element={<Riwayat />} />
+        <Route path="/guru" element={<Guru />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
